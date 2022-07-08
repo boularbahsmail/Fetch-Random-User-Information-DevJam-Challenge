@@ -84,7 +84,7 @@ export default function Home() {
         }
         <h5>
           &copy; <b>DevJam Challenges</b> - 2022 - Made with ❤️ by {" "}
-          <a href="https://twitter.com/boularbahsmail" target="_blank">Ismailium</a>
+          <a href="https://twitter.com/boularbahsmail" target="_blank" rel="noreferrer">Ismailium</a>
         </h5>
       </main>
     </div>
