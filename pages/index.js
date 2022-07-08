@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import axios from "axios";
 
@@ -27,9 +26,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    return () => {
-      fetchUser();
-    };
+    fetchUser();
   }, []);
 
   return (
@@ -75,13 +72,11 @@ export default function Home() {
                   </div>
                   <span>{person.location.city}, {person.location.country}</span>
                 </h4>
-
-                <button onClick={fetchUser} title="Fetch New User">{load}</button>
-
               </div>
             )
-          : null
+            : null
         }
+        <button onClick={fetchUser} title="Fetch New User">{load}</button>
         <h5>
           &copy; <b>DevJam Challenges</b> - 2022 - Made with ❤️ by {" "}
           <a href="https://twitter.com/boularbahsmail" target="_blank" rel="noreferrer">Ismailium</a>
