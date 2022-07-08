@@ -49,29 +49,31 @@ export default function Home() {
                 <div className={styles.CardAvatar}>
                   <img src={person.picture.medium} alt="User-Avatar" height="80px" width="80px" />
                 </div>
-                <h2>{person.name.first} {person.name.last}</h2>
-                <p>@{person.login.username}</p>
+                <div>
+                  <h2>{person.name.first} {person.name.last}</h2>
+                  <p>@{person.login.username}</p>
 
-                <h4 title="Email">
-                  <div className={styles.icon}>
-                    <AiOutlineMail />
-                  </div>
-                  <span>{person.email}</span>
-                </h4>
+                  <h5 title="Email">
+                    <div className={styles.icon}>
+                      <AiOutlineMail />
+                    </div>
+                    <span>{person.email}</span>
+                  </h5>
 
-                <h4 title="Phone">
-                  <div className={styles.icon}>
-                    <BsTelephone />
-                  </div>
-                  <span>{person.phone}</span>
-                </h4>
+                  <h5 title="Phone">
+                    <div className={styles.icon}>
+                      <BsTelephone />
+                    </div>
+                    <span>{person.phone}</span>
+                  </h5>
 
-                <h4 title="Location">
-                  <div className={styles.icon}>
-                    <VscLocation />
-                  </div>
-                  <span>{person.location.city}, {person.location.country}</span>
-                </h4>
+                  <h5 title="Location">
+                    <div className={styles.icon}>
+                      <VscLocation />
+                    </div>
+                    <span>{person.location.city}, {person.location.country}</span>
+                  </h5>
+                </div>
               </div>
             )
             : null

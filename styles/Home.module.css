@@ -26,6 +26,11 @@
   position: relative;
 }
 
+.main .Card div:last-child {
+  max-width: 100%;
+  width: 100%;
+}
+
 .main .Card:hover {
   background-color: var(--Green);
   border-color: var(--Green);
@@ -33,9 +38,16 @@
 
 .main .Card:hover h2,
 .main .Card:hover p,
-.main .Card:hover h4,
+.main .Card:hover h5,
 .main .Card:hover i {
   color: var(--White);
+}
+
+.main .Card h2,
+.main .Card p,
+.main .Card h5,
+.main .Card i {
+  width: 100%;
 }
 
 .main .Card:hover img {
@@ -61,9 +73,10 @@
 .main .Card p {
   margin-top: 10px;
   color: gray;
+  font-size: 14px;
 }
 
-.main .Card h4,
+.main .Card h5,
 .main .Card i {
   font-weight: bold;
   display: flex;
@@ -71,9 +84,17 @@
   align-items: center;
 }
 
+.main .Card h5 {
+  text-align: left;
+  font-size: 16px;
+  overflow-wrap: break-word;
+  margin: 30px 0;
+  width: max-content;
+  max-width: 100%;
+}
+
 .main .Card .icon {
-  height: 27px;
-  width: 27px;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,4 +132,12 @@
 .main h5 a {
   font-weight: bold;
   color: #009dff;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .main .Card h5 {
+    font-size: 15px;
+    margin: 25px 0;
+  }
 }
